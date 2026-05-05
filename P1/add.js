@@ -14,7 +14,7 @@ function addItem() {
     if(!value)return;
  
     let items=JSON.parse(localStorage.getItem("items"))||[];
-    items.push(value);
+    items.push({text:value, done:false});
 
     localStorage.setItem("items",JSON.stringify(items));
     input.value="";
